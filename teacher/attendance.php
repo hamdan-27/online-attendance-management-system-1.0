@@ -23,7 +23,7 @@ if($_SESSION['name']!='oasis')
         $dp = date('Y-m-d');
         $course = $_POST['whichcourse'];
         
-        $stat = mysql_query("insert into attendance(stat_id,course,st_status,stat_date) values('$stat_id','$course','$st_status','$dp')");
+        $stat = mysqli_query($conn, "insert into attendance(stat_id,course,st_status,stat_date) values('$stat_id','$course','$st_status','$dp')");
         
         $att_msg = "Attendance Recorded.";
 
@@ -31,7 +31,7 @@ if($_SESSION['name']!='oasis')
 
     }
   }
-  catch(Execption $e){
+  catch(Exception $e){
     $error_msg = $e->$getMessage();
   }
  ?>
@@ -139,9 +139,9 @@ if($_SESSION['name']!='oasis')
      $i=0;
      $radio = 0;
      $batch = $_POST['whichbatch'];
-     $all_query = mysql_query("select * from students where st_batch='$batch' order by st_id asc");
+     $all_query = mysqli_query($conn, "select * from students where st_batch='$batch' order by st_id asc");
 
-     while ($data = mysql_fetch_array($all_query)) {
+     while ($data = mysqli_fetch_array($all_query)) {
        $i++;
      ?>
   <body>

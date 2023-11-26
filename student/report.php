@@ -100,10 +100,10 @@ if($_SESSION['name']!='oasis')
      $count_pre = 0;
      
      //query for searching respective ID
-     $all_query = mysql_query("select * from reports where reports.st_id='$sr_id' and reports.course = '$course'");
-     $count_tot = mysql_num_rows($all_query);
+     $all_query = mysqli_query($conn, "select * from reports where reports.st_id='$sr_id' and reports.course = '$course'");
+     $count_tot = mysqli_num_rows($all_query);
 
-     while ($data = mysql_fetch_array($all_query)) {
+     while ($data = mysqli_fetch_array($all_query)) {
        $i++;
        if($data['st_status'] == "Present"){
           $count_pre++;

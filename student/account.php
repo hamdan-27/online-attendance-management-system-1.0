@@ -43,7 +43,7 @@ try{
   $sid = $_POST['id'];
 
   //udating students information to database table "students"
-  $result = mysql_query("update students set st_name='$_POST[name]',st_dept='$_POST[dept]',st_batch='$_POST[batch]',st_sem='$_POST[semester]', st_email = '$_POST[email]' where st_id='$sid'");
+  $result = mysqli_query($conn, "update students set st_name='$_POST[name]',st_dept='$_POST[dept]',st_batch='$_POST[batch]',st_sem='$_POST[semester]', st_email = '$_POST[email]' where st_id='$sid'");
   $success_msg = 'Updated  successfully';
   
   }
@@ -151,8 +151,8 @@ catch(Exception $e){
        $i=0;
 
        //searching students information respected to the particular ID
-       $all_query = mysql_query("select * from students where students.st_id='$sr_id'");
-       while ($data = mysql_fetch_array($all_query)) {
+       $all_query = mysqli_query($conn, "select * from students where students.st_id='$sr_id'");
+       while ($data = mysqli_fetch_array($all_query)) {
          $i++;
        
        ?>

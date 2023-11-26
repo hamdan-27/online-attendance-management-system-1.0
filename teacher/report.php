@@ -94,9 +94,9 @@ if($_SESSION['name']!='oasis')
      $sr_id = $_POST['sr_id'];
      $course = $_POST['whichcourse'];
 
-     $single = mysql_query("select * from reports where reports.st_id='$sr_id' and reports.course = '$course'");
+     $single = mysqli_query($conn, "select * from reports where reports.st_id='$sr_id' and reports.course = '$course'");
 
-     $count_tot = mysql_num_rows($single);
+     $count_tot = mysqli_num_rows($single);
   } 
 
     if(isset($_POST['sr_date'])){
@@ -104,7 +104,7 @@ if($_SESSION['name']!='oasis')
      $sdate = $_POST['date'];
      $course = $_POST['whichcourse'];
 
-     $all_query = mysql_query("select * from reports where reports.stat_date='$sdate' and reports.course = '$course'");
+     $all_query = mysqli_query($conn, "select * from reports where reports.stat_date='$sdate' and reports.course = '$course'");
 
     }
     if(isset($_POST['sr_date'])){
@@ -127,7 +127,7 @@ if($_SESSION['name']!='oasis')
     <?php
 
      $i=0;
-     while ($data = mysql_fetch_array($all_query)) {
+     while ($data = mysqli_fetch_array($all_query)) {
 
        $i++;
 
@@ -161,7 +161,7 @@ if($_SESSION['name']!='oasis')
 
        $count_pre = 0;
        $i= 0;
-       while ($data = mysql_fetch_array($single)) {
+       while ($data = mysqli_fetch_array($single)) {
        $i++;
        if($data['st_status'] == "Present"){
           $count_pre++;

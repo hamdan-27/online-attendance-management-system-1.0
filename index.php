@@ -1,4 +1,5 @@
 <?php
+require('connect.php');
 
 if(isset($_POST['login']))
 {
@@ -20,9 +21,9 @@ if(isset($_POST['login']))
 		
 		//checking login info into database
 		$row=0;
-		$result=mysql_query("select * from admininfo where username='$_POST[username]' and password='$_POST[password]' and type='$_POST[type]'");
+		$result=mysqli_query($conn, "select * from admininfo where username='$_POST[username]' and password='$_POST[password]' and type='$_POST[type]'");
 
-		$row=mysql_num_rows($result);
+		$row=mysqli_num_rows($result);
 
 		if($row>0 && $_POST["type"] == 'teacher'){
 			session_start();
