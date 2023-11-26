@@ -5,7 +5,7 @@ session_start();
 
 if($_SESSION['name']!='oasis')
 {
-  header('location: /am/index.php');
+  header('location: /online-attendance-management-system-1.0/index.php');
 }
 ?>
 
@@ -16,7 +16,7 @@ if($_SESSION['name']!='oasis')
 <head>
 <title>Online Attendance Management System 1.0</title>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="/am/css/main.css">
+<link rel="stylesheet" type="text/css" href="/online-attendance-management-system-1.0/css/main.css">
 
 </head>
 <!-- head ended -->
@@ -33,7 +33,7 @@ if($_SESSION['name']!='oasis')
   <a href="students.php">Students</a>
   <a href="report.php">My Report</a>
   <a href="account.php">My Account</a>
-  <a href="/am/logout.php">Logout</a>
+  <a href="/online-attendance-management-system-1.0/logout.php">Logout</a>
 
 </div>
 
@@ -46,7 +46,7 @@ if($_SESSION['name']!='oasis')
 <div class="row">
     <div class="content">
       <p>Be attentive and be regular :)</p>
-    <img src="/am/img/tcr.png" height="200px" width="300px" />
+    <img src="/online-attendance-management-system-1.0/img/tcr.png" height="200px" width="300px" />
 
   </div>
 

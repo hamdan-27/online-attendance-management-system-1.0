@@ -5,13 +5,13 @@ session_start();
 if($_SESSION['name']!='oasis')
 {
 
-  header('location: /am/index.php');
+  header('location: /online-attendance-management-system-1.0/index.php');
 }
 ?>
 
 <?php
 
-include('connect.php');
+include($_SERVER['DOCUMENT_ROOT'].'/online-attendance-management-system-1.0/connect.php');
 
 //data insertion
   try{
@@ -49,7 +49,7 @@ include('connect.php');
 <title>Online Attendance Management System 1.0</title>
 <meta charset="UTF-8">
 
-  <link rel="stylesheet" type="text/css" href="/am/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/online-attendance-management-system-1.0/css/main.css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
    
@@ -82,7 +82,7 @@ include('connect.php');
       <div class="navbar">
       <a href="signup.php">Create Users</a>
       <a href="index.php">Add Data</a>
-      <a href="/am/logout.php">Logout</a>
+      <a href="/online-attendance-management-system-1.0/logout.php">Logout</a>
 
     </div>
 

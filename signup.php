@@ -1,6 +1,6 @@
 <?php
 
-include('connect.php');
+include($_SERVER['DOCUMENT_ROOT'].'/online-attendance-management-system-1.0/connect.php');
 
   try{
     

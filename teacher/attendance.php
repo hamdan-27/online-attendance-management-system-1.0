@@ -10,7 +10,7 @@ if($_SESSION['name']!='oasis')
 ?>
 
 <?php
-    include('connect.php');
+    include($_SERVER['DOCUMENT_ROOT'].'/online-attendance-management-system-1.0/connect.php');
     try{
       
     if(isset($_POST['att'])){
@@ -43,7 +43,7 @@ if($_SESSION['name']!='oasis')
 <title>Online Attendance Management System 1.0</title>
 <meta charset="UTF-8">
 
-  <link rel="stylesheet" type="text/css" href="/am/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/online-attendance-management-system-1.0/css/main.css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
    
@@ -75,7 +75,7 @@ if($_SESSION['name']!='oasis')
   <a href="teachers.php">Faculties</a>
   <a href="attendance.php">Attendance</a>
   <a href="report.php">Report</a>
-  <a href="/am/logout.php">Logout</a>
+  <a href="/online-attendance-management-system-1.0/logout.php">Logout</a>
 
 </div>
 

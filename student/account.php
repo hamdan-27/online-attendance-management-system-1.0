@@ -10,7 +10,7 @@
   }
   ?>
 
-  <?php include('connect.php');?>
+  <?php include($_SERVER['DOCUMENT_ROOT'].'/online-attendance-management-system-1.0/connect.php');?>
 
 
 <?php 
@@ -67,7 +67,7 @@ catch(Exception $e){
 <title>Online Attendance Management System 1.0</title>
 <meta charset="UTF-8">
   
-  <link rel="stylesheet" type="text/css" href="/am/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/online-attendance-management-system-1.0/css/main.css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
    
@@ -96,7 +96,7 @@ catch(Exception $e){
   <a href="students.php">Students</a>
   <a href="report.php">My Report</a>
   <a href="account.php">My Account</a>
-  <a href="/am/logout.php">Logout</a>
+  <a href="/online-attendance-management-system-1.0/logout.php">Logout</a>
 
 </div>
 
